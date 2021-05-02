@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="font/font-awesome.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+              <a class="navbar-brand" href="#">University</a>
+              <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">About Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Contact Us</a>
+                </li>
+                
+              </ul>
+              <form class="form-inline my-2 my-lg-0">
+                <a onclick="apply_now();" class="btn btn-success my-2 my-sm-0" type="submit">Apply Now</a>
+              </form>
+            </div>
+          </nav>
+          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner" id="carousel">
+
+              <!-- <div class="carousel-item active">
+                <img src="../Assets/images/banner/slider_1.jpg" class="d-block w-100" height="500" alt="...">
+              </div> -->
+             
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+           
+
+            <!-- ########################################################################################333 -->
+                                                <!--  APPLY NOW FORM  BEGIN-->
+            <!-- ############################################################################################### -->
+            <div class="shadow p-3 mb-5 bg-white rounded apply_now_form" style="position: absolute;right:10%;top:75px;display:none">
+                <h3>Admissions Open</h3>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1"><i class="fa fa-user-o" aria-hidden="true"></i></span>
+                    </div>
+                    <input type="text" class="form-control" name="student_full_name" id="student_full_name" placeholder="Enter Full Name" aria-label="Username" aria-describedby="basic-addon1">
+                  </div>
+                  
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon2"><i class="fa fa-envelope-o" aria-hidden="true"></i></span>
+                      </div>
+                    <input type="text" class="form-control" name="student_user_name" id="student_user_name" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                   
+                  </div>
+                  <div class="input-group mb-3">
+                      
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon2"><i class="fa fa-phone" aria-hidden="true"></i></span>
+                      </div>
+                      <select name="country_code" id="country_code" style="width:18%">
+                          <option value="+91">+91</option>
+                          <option value="+92">+92</option>
+                          <option value="+93">+93</option>
+                          <option value="+94">+94</option>
+                          <option value="+95">+95</option>
+                          <option value="+96">+96</option>
+                          <option value="+97">+97</option>
+                      </select>
+                    <input type="text" style="left:0%;width:63%;" class="form-control" name="student_contact_number" id="student_contact_number" placeholder="Mobile Number" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                   
+                  </div>
+                  
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon2"><i class="fa fa-envelope-o" aria-hidden="true"></i></span>
+                      </div>
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Enter Your Email Address" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                   
+                  </div>
+                  <div class="input-group mb-3">
+                      
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon2"><i class="fa fa-phone" aria-hidden="true"></i></span>
+                      </div>
+                      <select name="department" id="department" style="width:85%">
+                       
+                    </select>
+                   
+                  </div>
+                  <div class="input-group mb-3">
+                      
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon2"><i class="fa fa-phone" aria-hidden="true"></i></span>
+                      </div>
+                      <select name="courses" id="courses" style="width:85%">
+                       
+                    </select>
+                   
+                  </div>
+                  <div class="input-group mb-3 d-flex justify-content-center">
+                      <button class="btn btn-primary w-100" id="register_student">REGISTER</button>
+                      <span class="mt-2"><a href="#" id="login_now">Already Registered? Login</a></span>
+                  </div>
+                
+            </div>
+
+            <div class="shadow p-3 mb-5 bg-white rounded login" style="position: absolute;right:10%;top:75px;display:none">
+              <h3>Admissions Open</h3>
+              <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1"><i class="fa fa-user-o" aria-hidden="true"></i></span>
+                  </div>
+                  <input type="email" class="form-control" name="email_login" id="email_login" placeholder="Enter Email Id" aria-label="Username" aria-describedby="basic-addon1">
+                </div>
+                
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon2"><i class="fa fa-envelope-o" aria-hidden="true"></i></span>
+                    </div>
+                  <input type="password" class="form-control" name="password" id="password" placeholder="ENTER PASSWORD" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                 
+                </div>
+              
+                
+                <div class="input-group mb-3 d-flex justify-content-center">
+                    <button class="btn btn-primary w-100" id="login">LOGIN</button>
+                    <span class="mt-2"><a href="#" id="register_now">Not Registered? Register</a></span>
+                </div>
+              
+          </div>
+
+            <!-- ########################################################################################333 -->
+                                                <!--  APPLY NOW FORM  END-->
+            <!-- ############################################################################################### -->
+          </div>
+
+
+
+
+           <!-- ########################################################################################333 -->
+                                                <!--  TOAST MESSAGE START-->
+            <!-- ############################################################################################### -->
+          <div class="toast" data-autohide="false">
+            <div class="toast-header">
+              MESSAGE
+            </div>
+            <div class="toast-body d-flex justify-content-center">
+              <div class="d-flex justify-content-center">
+                <p id="get_message"></p>
+              </div>
+              
+              
+            </div>
+            <div class="d-flex justify-content-center mb-2">
+              <button class="btn btn-primary" data-dismiss="toast">Close</button>
+            </div>
+          </div>
+           <!-- ########################################################################################333 -->
+                                                <!-- TOAST MESSAGE  END-->
+            <!-- ############################################################################################### -->
+          
+    </div>
+
+     <!-- ########################################################################################333 -->
+                                                <!-- ABOUT US START-->
+            <!-- ############################################################################################### -->
+    <div class="container">
+      <div class="my-5" style="position:relative;left: 10%;">
+        <img src="../Assets/images/about/about.jpg" height="300" width="400" alt="">
+      </div>
+      <div class="my-5" style="position:absolute;bottom:0;left: 50%;top:70%;width: 30%;">
+        <h2>About Us</h2>
+        <p>What is Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industry's standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book it has?</p>
+      </div>
+    </div>
+    
+     <!-- ########################################################################################333 -->
+                                                <!-- ABOUT US END-->
+            <!-- ############################################################################################### -->
+           <!-- Site footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <h6>About</h6>
+            <p class="text-justify">Scanfcode.com <i>CODE WANTS TO BE SIMPLE </i> is an initiative  to help the upcoming programmers with the code. Scanfcode focuses on providing the most efficient code or snippets as the code wants to be simple. We will help programmers build up concepts in different programming languages that include C, C++, Java, HTML, CSS, Bootstrap, JavaScript, PHP, Android, SQL and Algorithm.</p>
+          </div>
+
+          <div class="col-xs-6 col-md-3">
+            <h6>Categories</h6>
+            <ul class="footer-links">
+              <li><a href="http://scanfcode.com/category/c-language/">C</a></li>
+              <li><a href="http://scanfcode.com/category/front-end-development/">UI Design</a></li>
+              <li><a href="http://scanfcode.com/category/back-end-development/">PHP</a></li>
+              <li><a href="http://scanfcode.com/category/java-programming-language/">Java</a></li>
+              <li><a href="http://scanfcode.com/category/android/">Android</a></li>
+              <li><a href="http://scanfcode.com/category/templates/">Templates</a></li>
+            </ul>
+          </div>
+
+          <div class="col-xs-6 col-md-3">
+            <h6>Quick Links</h6>
+            <ul class="footer-links">
+              <li><a href="http://scanfcode.com/about/">About Us</a></li>
+              <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
+              <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Contribute</a></li>
+              <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
+              <li><a href="http://scanfcode.com/sitemap/">Sitemap</a></li>
+            </ul>
+          </div>
+        </div>
+        <hr>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text">Copyright &copy; 2017 All Rights Reserved by 
+         <a href="#">Scanfcode</a>.
+            </p>
+          </div>
+
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <ul class="social-icons">
+              <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+              <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+            </ul>
+          </div>
+        </div>
+      </div>
+</footer>
+
+    
+</body>
+<script src="js/jquery.3.2.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.js"></script>
+
+<script>
+// $('.toast').toast('show');
+
+window.onload=function()
+{
+  $.ajax({
+    type:"post",
+    url:"get_carousel.php",
+    success:function(response)
+    {
+      var result=JSON.parse(response);
+      console.log(result);
+      if (result!=null) {
+        var carousel_html="";
+        for (let i = 0; i < result.length; i++) {
+          carousel_html+="<div class='carousel-item' id='carousel_"+i+"'>";
+         carousel_html+=" <img src='../Assets/images/banner/"+result[i].banner_image+"' class='d-block w-100' height='500'>";
+         carousel_html+="</div>";
+        }
+        $('#carousel').html(carousel_html);
+        $('#carousel_0').addClass('active');
+
+        $('.carousel').carousel({
+          interval: 2000
+        });
+        // console.log(carousel_html);
+        
+               
+             
+      }
+    }
+  });
+
+  $.ajax({
+    type:"post",
+    url:"get_department.php",
+    success:function(response)
+    {
+        alert(response);
+        var result=JSON.parse(response);
+        console.log(result);
+        var course_html="";
+        course_html+="<option value=''>SELECT DEPARTMENT</option>";
+        for (let i = 0; i < result.length; i++) {
+          course_html+="<option value='"+result[i].cat_name+"'>"+result[i].cat_name+"</option>";
+        }
+        $('#department').html(course_html);
+        // if (result.login_status=="1") {
+        //     $('#logout').show();
+        // }
+    }
+});
+
+
+}
+$('#courses').attr('disabled','disabled');
+
+$('#department').change(function(){
+// alert("hello");
+$('#courses').removeAttr('disabled');
+$.ajax({
+    type:"post",
+    url:"get_courses.php",
+    success:function(response)
+    {
+        alert(response);
+        var result=JSON.parse(response);
+        console.log(result);
+        var course_html="";
+        course_html+="<option value=''>SELECT COURSES</option>";
+        for (let i = 0; i < result.length; i++) {
+          course_html+="<option value='"+result[i].course_title+"'>"+result[i].course_title+"</option>";
+        }
+        $('#courses').html(course_html);
+        // if (result.login_status=="1") {
+        //     $('#logout').show();
+        // }
+    }
+});
+});
+
+
+
+
+$('#login_now').click(function(){
+  $('.login').show();
+  $('.apply_now_form').hide();
+});
+$('#register_now').click(function(){
+  $('.login').hide();
+  $('.apply_now_form').show();
+});
+$(document).on('click','#login',function(){
+var email=$('#email_login').val();
+var password=$('#password').val();
+var data={email:email,password:password};
+$.ajax({
+  type:"post",
+  url:"login.php",
+  data:data,
+  success:function(response)
+  {
+    // alert(response);
+    var result=JSON.parse(response);
+    if (result.logged_in) {
+      alert(result.logged_in);
+      window.location="online_application_form.html";
+    }
+    if(result.failed)
+    {
+      alert(result.failed);
+    }
+  }
+});
+});
+
+
+// function get_all_user_name_from_database() {
+//   $.ajax({
+//     url:"get_user_name_availability.php",
+//     success:function(response)
+//     {
+//       console.log(response);
+//       localStorage.setItem('user_data',response);
+//     }
+//   });
+// }
+// get_all_user_name_from_database();
+
+
+function apply_now()
+{
+    $('.apply_now_form').css('display','block');
+}
+$('.dial_code').on('click','#dial_code',function(){
+    var code=$('#dial_code').val();
+    alert(code);
+});
+
+
+
+$(document).on('click','#register_student',function(){
+  var email=$('#email').val();
+  var data={email:email,action:"send_otp"};
+  alert(email);
+  $.ajax({
+    type:"post",
+    url:"send_email.php",
+    data:data,
+    success:function(response)
+    {
+      var result=JSON.parse(response);
+      if (result.otp_sent) {
+        $('.toast').toast('show');
+          $('#get_message').html(result.otp_sent);
+          var x=save_data();
+          if (x==true) {
+            user_email=result.email;
+            sessionStorage.setItem('user_email',user_email);
+          }
+         
+
+
+
+          setTimeout(() => {
+            window.location="otp-verification.html";
+          }, 2000);
+      }
+    }
+  });
+  
+
+  });
+
+
+  function save_data() {
+  var user_data=localStorage.getItem('user_data');
+  var student_full_name=$('input[name="student_full_name"]').val();
+  var student_user_name=$('input[name="student_user_name"]').val();
+  var email=$('#email').val();
+
+  var country_code=$('#country_code').val();
+  var student_contact_number=$('input[name="student_contact_number"]').val();
+  var mobile_number=country_code+student_contact_number;
+  var course=$('select[name="courses"]').val();
+  var user_info={student_full_name:student_full_name,student_user_name:student_user_name,email:email,mobile_number:mobile_number,course:course};
+  console.log(user_info);
+  $.ajax({
+    type:"post",
+    url:"register_student.php",
+    data:user_info,
+    success:function(response)
+    {
+        var result=JSON.parse(response);
+        if (result.successfull) {
+          if (result.email) {
+            console.log('successfull');
+           
+          }
+        }
+        if (result.failed) {
+          console.log('failed');
+         
+        }
+        if (result.error) {
+          console.log('error');
+
+        }
+    }
+  });
+return true;
+  }
+
+
+
+</script>
+</html>

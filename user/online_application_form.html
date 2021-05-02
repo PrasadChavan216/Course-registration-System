@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="font/font-awesome.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+              <a class="navbar-brand" href="#">University</a>
+              
+              <form class="form-inline my-2 my-lg-0 ml-auto" id="logout" style="display: none;">
+                <a  class="btn btn-success my-2 my-sm-0" onclick="logout()">Logout</a>
+              </form>
+
+            </div>
+          </nav>
+           <!-- ########################################################################################333 -->
+                                                <!--  ONLINE APPLICATION FORM START-->
+            <!-- ############################################################################################### -->
+                <div class="row justify-content-center">
+                    
+                    <div class="col-12 col-sm-4 col-md-12 col-lg-12 col-xl-12 text-center p-0 mt-3 mb-2">
+                        <h2>ONLINE APPLICATION FORM</h2>
+                        <div class="card px-0 pt-4 pb-0 mt-3 mb-3">
+                            <form id="msform">
+                                <!-- progressbar -->
+                                <ul id="progressbar">
+                                    <li class="active" id="account"><strong>Course And Basic Details</strong></li>
+                                    <li id="personal"><strong>Educational Qualifications</strong></li>
+                                    <li id="payment"><strong>Upload Files</strong></li>
+                                    <li id="confirm"><strong>Finish</strong></li>
+                                </ul>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div> <br> <!-- fieldsets -->
+                                <fieldset>
+                                    <div class="form-card">
+                                        <div class="row">
+                                            <div class="col-7">
+                                                <h2 class="fs-title">Course Details:</h2>
+                                            </div>
+                                            <div class="col-5">
+                                                <h2 class="steps">Step 1 - 4</h2>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <label class="fieldlabels">COURSE APPLYING FOR</label> 
+                                                <select name="courses" id="courses">
+                                                    <option id="get_course" value="">SELECT COURSES</option>
+                                                   
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-7">
+                                            <h2 class="fs-title">Personal Details:</h2>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <label class="fieldlabels">FULL NAME: *</label> 
+                                                <input type="text" name="student_name" placeholder="FULL NAME" />
+                                            </div>
+                                            <div class="col-md-3">
+                                                <label class="fieldlabels">EMAIL ID: *</label> 
+                                                <input type="email" name="email" placeholder="EMAIL ID" />
+                                            </div>
+                                            <div class="col-md-3">
+                                                <label class="fieldlabels">ALTERNATE EMAIL ID: *</label> 
+                                                <input type="email" name="email_2" placeholder="ALTERNATE EMAIL ID" />
+                                            </div>
+                                            <div class="col-md-3">
+                                                <label class="fieldlabels">PHONE NUMBER: *</label> 
+                                                <input type="text" name="mobile" placeholder="PHONE NUMBER" />
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <label class="fieldlabels">DATE OF BIRTH: *</label> 
+                                                <input type="date" name="dob" />
+                                            </div>
+                                            <div class="col-md-3">
+                                                <label class="fieldlabels">GENDER: *</label> 
+                                                <select name="gender" >
+                                                    <option id="gender" value="">SELECT</option>
+                                                    <option value="Male">Male</option>
+                                                    <option value="Female">Female</option>
+                                                    <option value="Others">Others</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <label class="fieldlabels">MARITAL STATUS: *</label> 
+                                                <select name="marital_status" >
+                                                    <option id="marital_status" value="">SELECT</option>
+                                                    <option value="Married">Married</option>
+                                                    <option value="UnMarried">UnMarried</option>
+                                                    
+                                                </select>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <label class="fieldlabels">BLOOD GROUP: *</label> 
+                                                <select name="blood_group" >
+                                                    <option id="blood_group" value="">SELECT</option>
+                                                    <option value="O positive">O positive</option>
+                                                    <option value="O negative">O negative</option>
+                                                    <option value="A positive">A positive</option>
+                                                    <option value="A negative">A negative</option>
+                                                    <option value="B positive">B positive</option>
+                                                    <option value="B negative">B negative</option>
+                                                    <option value="AB positive">AB positive</option>
+                                                    <option value="AB negative">AB negative</option>
+                                                    
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-7">
+                                            <h2 class="fs-title">Address For Correspondence:</h2>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <label class="fieldlabels">COUNTRY: *</label> 
+                                                <select name="country" >
+                                                    <option id="country" value="">SELECT</option>
+                                                    <option value="INDIA">INDIA</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <label class="fieldlabels">STATE *</label> 
+                                                <select name="state" >
+                                                    <option id="state" value="">SELECT</option>
+                                                    <option value="MAHARASHTRA">MAHARASHTRA</option>
+                                                    <option value="MAHARASHTRA">GUJRAT</option>
+                                                    <option value="MAHARASHTRA">UTTARPRADESH</option>
+                                                    <option value="MAHARASHTRA">RAJASTHAN</option>
+                                                    <option value="MAHARASHTRA">MADHYA PRADESH</option>
+                                                    <option value="MAHARASHTRA">ANDHRA PRADESH</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <label class="fieldlabels">Address Line 1: *</label> 
+                                                    <input type="text" name="addr_1" id="addr_1" placeholder="Address Line 1">
+                                            </div>
+                                            <!-- <div class="col-md-3">
+                                                <label class="fieldlabels">Address Line 2: *</label> 
+                                                    <input type="text" name="addr_2" placeholder="Address Line 2">
+                                            </div> -->
+                                            <div class="col-md-3">
+                                                <label class="fieldlabels">Pincode: *</label> 
+                                                    <input type="text" name="pincode" id="pincode" maxlength="6" placeholder="ENTER PINCODE">
+                                            </div>
+                                        </div>
+                                       
+                                            
+                                                <h6>Is Permanent Address Same As Address For Communication ?</h6>
+                                              
+                                                <div class="form-check-inline">
+                                                    <label class="form-check-label">
+                                                      <input type="radio" class="form-check-input" name="optradio">YES
+                                                    </label>
+                                                  </div>
+                                                  <div class="form-check-inline">
+                                                    <label class="form-check-label">
+                                                      <input type="radio" class="form-check-input" name="optradio">NO
+                                                    </label>
+                                                  </div>
+
+                                                  <div class="col-7">
+                                                    <h2 class="fs-title mt-5">FATHER/MOTHER/GUARDIAN DETAILS:</h2>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <label class="fieldlabels">Name of Father/Mother/Guardian: *</label> 
+                                                        <input type="text" name="guardian_name" placeholder="Enter Name Of Your Father/Mother/Guardian">
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <label class="fieldlabels">Type Of Relationship: *</label> 
+                                                     
+                                                       <select name="guardian_relationship" >
+                                                           <option id="guardian_relationship" value="">SELECT</option>
+                                                           <option value="Father">Father</option>
+                                                           <option value="Mother">Mother</option>
+                                                           <option value="Brother">Brother</option>
+                                                           <option value="Sister">Sister</option>
+                                                           <option value="Wife">Wife</option>
+                                                       </select>
+                                                    </div>
+                                                </div>
+                                    </div> 
+                                    <input type="button" id="next" class="next action-button mt-5" value="Next" />
+                                </fieldset>
+
+
+
+                                <fieldset>
+                                    <div class="form-card">
+                                        <div class="row">
+                                            <div class="col-7">
+                                                <h2 class="fs-title">10TH BOARD DETAILS:</h2>
+                                            </div>
+                                            <div class="col-5">
+                                                <h2 class="steps">Step 2 - 4</h2>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <label class="fieldlabels">SCHOOL NAME: *</label> 
+                                                    <input type="text" name="school_name" placeholder="Enter School Name" />
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <label class="fieldlabels">YEAR: *</label> 
+                                                    <select name="10th_pass_year" id="10th_pass_year">
+                                                        <option id="10th_pass_year" value="">SELECT PASS OUT YEAR</option>
+                                                        <option value="2005">2005</option>
+                                                        <option value="2006">2006</option>
+                                                        <option value="2007">2007</option>
+                                                        <option value="2008">2008</option>
+                                                        <option value="2009">2009</option>
+                                                        <option value="2010">2010</option>
+                                                        <option value="2011">2011</option>
+                                                        <option value="2012">2012</option>
+                                                        <option value="2013">2013</option>
+                                                        <option value="2014">2014</option>
+                                                        <option value="2015">2015</option>
+                                                        <option value="2016">2016</option>
+                                                        <option value="2017">2017</option>
+                                                        <option value="2018">2018</option>
+                                                        <option value="2019">2019</option>
+                                                        <option value="2020">2020</option>
+                                                        <option value="2021">2021</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <label class="fieldlabels">PERCENTAGE OBTAINED: *</label> 
+                                                    <input type="text" name="school_percentage" placeholder="Enter Percentage Obtained" />
+                                                </div>
+                                            </div>
+
+
+                                            <div class="col-7">
+                                                <h2 class="fs-title">12TH BOARD DETAILS:</h2>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <label class="fieldlabels">COLLEGE NAME: *</label> 
+                                                    <input type="text" name="college_name" placeholder="Enter School Name" />
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <label class="fieldlabels">YEAR: *</label> 
+                                                    <select name="12th_pass_year" id="12th_pass_year">
+                                                        <option id="get_12th_pass_year" value="">SELECT PASS OUT YEAR</option>
+                                                        <option value="2005">2005</option>
+                                                        <option value="2006">2006</option>
+                                                        <option value="2007">2007</option>
+                                                        <option value="2008">2008</option>
+                                                        <option value="2009">2009</option>
+                                                        <option value="2010">2010</option>
+                                                        <option value="2011">2011</option>
+                                                        <option value="2012">2012</option>
+                                                        <option value="2013">2013</option>
+                                                        <option value="2014">2014</option>
+                                                        <option value="2015">2015</option>
+                                                        <option value="2016">2016</option>
+                                                        <option value="2017">2017</option>
+                                                        <option value="2018">2018</option>
+                                                        <option value="2019">2019</option>
+                                                        <option value="2020">2020</option>
+                                                        <option value="2021">2021</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <label class="fieldlabels">PERCENTAGE OBTAINED: *</label> 
+                                                    <input type="text" name="college_percentage" placeholder="Enter Percentage Obtained" />
+                                                </div>
+                                            </div>
+                                            <div class="col-7">
+                                                <h2 class="fs-title">GRADUATION DETAILS:</h2>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <label class="fieldlabels">COLLEGE NAME: *</label> 
+                                                    <input type="text" name="degree_name" placeholder="Enter School Name" />
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <label class="fieldlabels">YEAR: *</label> 
+                                                    <select name="degree_pass_year" id="degree_pass_year">
+                                                        <option id="get_degree_pass_year" value="">SELECT PASS OUT YEAR</option>
+                                                        <option value="2005">2005</option>
+                                                        <option value="2006">2006</option>
+                                                        <option value="2007">2007</option>
+                                                        <option value="2008">2008</option>
+                                                        <option value="2009">2009</option>
+                                                        <option value="2010">2010</option>
+                                                        <option value="2011">2011</option>
+                                                        <option value="2012">2012</option>
+                                                        <option value="2013">2013</option>
+                                                        <option value="2014">2014</option>
+                                                        <option value="2015">2015</option>
+                                                        <option value="2016">2016</option>
+                                                        <option value="2017">2017</option>
+                                                        <option value="2018">2018</option>
+                                                        <option value="2019">2019</option>
+                                                        <option value="2020">2020</option>
+                                                        <option value="2021">2021</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <label class="fieldlabels">CGPA OBTAINED: *</label> 
+                                                    <input type="text" name="degree_percentage" placeholder="Enter Percentage Obtained" />
+                                                </div>
+                                            </div>
+                                          
+                                        </div> 
+                                      
+                                        
+                                         
+                                    </div>
+                                     <input type="button" name="save_education_details" id="save_education_details" class="next action-button" value="Next" />
+                                      <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                                </fieldset>
+                                <fieldset>
+                                    <div class="form-card">
+                                        <div class="row">
+                                            <div class="col-7">
+                                                <h2 class="fs-title">Image Upload:</h2>
+                                            </div>
+                                            <div class="col-5">
+                                                <h2 class="steps">Step 3 - 4</h2>
+                                            </div>
+                                        </div>
+                                        <form  id="upload_files">
+                                            <label class="fieldlabels">Upload Your Photo:</label> 
+                                            <input type="file" name="photo" id="photo"> 
+                                            <label class="fieldlabels">Upload Signature Photo:</label> 
+                                            <input type="file" name="sign" id="sign">
+                                            <input type="button" id="upload_images" class="next action-button" value="Submit" /> 
+                                    <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                                        </form>
+                                      
+                                    </div> 
+                                    
+                                </fieldset>
+                                <fieldset id="success_message">
+                                    <div class="form-card">
+                                        <div class="row">
+                                            <div class="col-7">
+                                                <h2 class="fs-title">Finish:</h2>
+                                            </div>
+                                            <div class="col-5">
+                                                <h2 class="steps">Step 4 - 4</h2>
+                                            </div>
+                                        </div> <br><br>
+                                        <h2 class="purple-text text-center"><strong>SUCCESS !</strong></h2> <br>
+                                        <div class="row justify-content-center">
+                                            <div class="col-3"> <img src="https://i.imgur.com/GwStPmg.png" class="fit-image"> </div>
+                                        </div> <br><br>
+                                        <div class="row justify-content-center">
+                                            <div class="col-7 text-center">
+                                                <h5 class="purple-text text-center">You Have Successfully Signed Up</h5>
+                                                <a class="btn btn-primary" onclick="print_form();">print form</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+      
+             <!-- ########################################################################################333 -->
+                                                <!--  ONLINE APPLICATION FORM END-->
+            <!-- ############################################################################################### -->
+        
+
+         
+                
+
+
+           <!-- ########################################################################################333 -->
+                                                <!--  TOAST MESSAGE START-->
+            <!-- ############################################################################################### -->
+          <div class="toast" data-autohide="false">
+            <div class="toast-header">
+              MESSAGE
+            </div>
+            <div class="toast-body d-flex justify-content-center">
+              <div class="d-flex justify-content-center">
+                <p id="get_message"></p>
+              </div>
+              
+              
+            </div>
+            <div class="d-flex justify-content-center mb-2">
+              <button class="btn btn-primary" data-dismiss="toast">Close</button>
+            </div>
+          </div>
+           <!-- ########################################################################################333 -->
+                                                <!-- TOAST MESSAGE  END-->
+            <!-- ############################################################################################### -->
+    </div>
+      <!-- Site footer -->
+      <footer class="site-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 col-md-6">
+              <h6>About</h6>
+              <p class="text-justify">Scanfcode.com <i>CODE WANTS TO BE SIMPLE </i> is an initiative  to help the upcoming programmers with the code. Scanfcode focuses on providing the most efficient code or snippets as the code wants to be simple. We will help programmers build up concepts in different programming languages that include C, C++, Java, HTML, CSS, Bootstrap, JavaScript, PHP, Android, SQL and Algorithm.</p>
+            </div>
+  
+            <div class="col-xs-6 col-md-3">
+              <h6>Categories</h6>
+              <ul class="footer-links">
+                <li><a href="http://scanfcode.com/category/c-language/">C</a></li>
+                <li><a href="http://scanfcode.com/category/front-end-development/">UI Design</a></li>
+                <li><a href="http://scanfcode.com/category/back-end-development/">PHP</a></li>
+                <li><a href="http://scanfcode.com/category/java-programming-language/">Java</a></li>
+                <li><a href="http://scanfcode.com/category/android/">Android</a></li>
+                <li><a href="http://scanfcode.com/category/templates/">Templates</a></li>
+              </ul>
+            </div>
+  
+            <div class="col-xs-6 col-md-3">
+              <h6>Quick Links</h6>
+              <ul class="footer-links">
+                <li><a href="http://scanfcode.com/about/">About Us</a></li>
+                <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
+                <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Contribute</a></li>
+                <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
+                <li><a href="http://scanfcode.com/sitemap/">Sitemap</a></li>
+              </ul>
+            </div>
+          </div>
+          <hr>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-sm-6 col-xs-12">
+              <p class="copyright-text">Copyright &copy; 2017 All Rights Reserved by 
+           <a href="#">Scanfcode</a>.
+              </p>
+            </div>
+  
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <ul class="social-icons">
+                <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+                <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+              </ul>
+            </div>
+          </div>
+        </div>
+  </footer>
+    <div id="test"></div>
+</body>
+<script src="js/jquery.3.2.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css'>
+<script src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js'></script>
+<script>
+function logout() {
+    $.ajax({
+    type:"post",
+    url:"logout.php",
+    success:function(response)
+    {
+        var result=JSON.parse(response);
+        console.log(result.login_status);
+        if (result.login_status) {
+            $('#logout').hide();
+            window.location="index.html";
+        }
+    }
+});
+return true;
+}
+
+
+window.onload=function(){
+
+$.ajax({
+    type:"post",
+    url:"get_login_status.php",
+    success:function(response)
+    {
+        // alert(response);
+        var result=JSON.parse(response);
+        console.log(result.login_status);
+        if (result.login_status=="1") {
+            $('#logout').show();
+        }
+    }
+});
+
+
+
+
+
+    $.ajax({
+        type:"post",
+        url:"retrive_user_data.php",
+        success:function(response)
+        {
+            var result=JSON.parse(response);
+            console.log(result);
+            if (result[0].course_selected!=null) {
+                course=result[0].course_selected;
+            $('#get_course').html(course);
+            $('#get_course').val(course);
+            }
+            if (result[0].student_name!=null) {
+                student_name=result[0].student_name;
+            $('input[name="student_name"]').val(student_name);
+            }
+            if (result[0].student_email!=null) {
+                email=result[0].student_email;
+            $('input[name="email"]').val(email);
+            }
+            if (result[0].student_alternate_email!=null) {
+                student_alternate_email=result[0].student_alternate_email;
+            $('input[name="email_2"]').val(student_alternate_email);
+            }
+            if (result[0].student_mobile!=null) {
+                mobile_number=result[0].student_mobile;
+            $('input[name="mobile"]').val(mobile_number);
+            }
+            if (result[0].date_of_birth!=null) {
+                dob=result[0].date_of_birth;
+            $('input[name="dob"]').val(dob);
+            }
+
+            if (result[0].gender!=null) {
+                gender=result[0].gender;
+            $('#gender').val(gender);
+            $('#gender').html(gender);
+            }
+
+            if (result[0].marital_status!=null) {
+                marital_status=result[0].marital_status;
+            $('#marital_status').val(marital_status);
+            $('#marital_status').html(marital_status);
+            }
+
+            if (result[0].blood_group!=null) {
+                blood_group=result[0].blood_group;
+            $('#blood_group').val(blood_group);
+            $('#blood_group').html(blood_group);
+            }
+
+            if (result[0].student_address!=null) {
+                student_address=result[0].student_address;
+            $('#addr_1').val(student_address);
+            }
+
+            if (result[0].country!=null) {
+                country=result[0].country;
+            $('#country').val(country);
+            $('#country').html(country);
+            }
+
+            if (result[0].state!=null) {
+                state=result[0].state;
+            $('#state').val(state);
+            $('#state').html(state);
+            }
+
+            if (result[0].pincode!=null) {
+                country=result[0].pincode;
+            $('#pincode').val(pincode);
+            }
+
+            if (result[0].pincode!=null) {
+                pincode=result[0].pincode;
+            $('#pincode').val(pincode);
+            }
+            if (result[0].guardian_name!=null) {
+                guardian_name=result[0].guardian_name;
+            $('input[name="guardian_name"]').val(guardian_name);
+            }
+            if (result[0].guardian_relationship!=null) {
+                guardian_relationship=result[0].guardian_relationship;
+            $('#guardian_relationship').val(guardian_relationship);
+            $('#guardian_relationship').html(guardian_relationship);
+            }
+            if (result[0].school_name_10) {
+                $('input[name="school_name"]').val(result[0].school_name_10);
+            }
+            if (result[0].college_name_12) {
+                $('input[name="college_name"]').val(result[0].college_name_12);
+            }
+            if (result[0].college_degree) {
+                $('input[name="degree_name"]').val(result[0].college_degree);
+            }
+
+
+            if (result[0].school_percentage_10) {
+                $('input[name="school_percentage"]').val(result[0].school_percentage_10);
+            }
+            if (result[0].college_percentage_12) {
+                $('input[name="college_percentage"]').val(result[0].college_percentage_12);
+            }
+            if (result[0].college_degree_percentage) {
+                $('input[name="degree_percentage"]').val(result[0].college_degree_percentage);
+            }
+
+            if (result[0].school_pass_year_10) {
+                $('select[name="10th_pass_year"]').val(result[0].school_pass_year_10);
+            }
+            if (result[0].college_pass_year_12) {
+                $('select[name="12th_pass_year"]').val(result[0].college_pass_year_12);
+            }
+            if (result[0].college_degree_pass_year) {
+                $('select[name="degree_pass_year"]').val(result[0].college_degree_pass_year);
+            }
+           
+$('#success_message').hide();
+         
+
+           
+
+        }
+    });
+}
+
+
+
+$(document).on('click','#next',function(){
+    var data=
+    {
+        courses:$('#courses').val(),
+        student_name:$('input[name="student_name"]').val(),
+        student_email:$('input[name="email"]').val(),
+        student_email_2:$('input[name="email_2"]').val(),
+        student_mobile:$('input[name="mobile"]').val(),
+        date_of_birth:$('input[name="dob"]').val(),
+        gender:$('select[name="gender"]').val(),
+        marital_status:$('select[name="marital_status"]').val(),
+        blood_group:$('select[name="blood_group"]').val(),
+        country:$('select[name="country"]').val(),
+        state:$('select[name="state"]').val(),
+        address:$('input[name="addr_1"]').val(),
+        pincode:$('#pincode').val(),
+        guardian_name:$('input[name="guardian_name"]').val(),
+        guardian_relationship:$('select[name="guardian_relationship"]').val(),
+    }
+console.log(data);
+
+$.ajax({
+type:"post",
+url:"save_data.php",
+data:data,
+success:function(response)
+{
+    var result=JSON.parse(response);
+    if (result.saved_successfully) {
+        $('.toast').toast('show');
+          $('#get_message').html(result.saved_successfully);
+    }
+   
+}
+});
+});
+
+
+
+$(document).on('click','#save_education_details',function(){
+    var data=
+    {
+        school_name:$('input[name="school_name"]').val(),
+        college_name:$('input[name="college_name"]').val(),
+        degree_name:$('input[name="degree_name"]').val(),
+        school_percentage:$('input[name="school_percentage"]').val(),
+        college_percentage:$('input[name="college_percentage"]').val(),
+        degree_percentage:$('input[name="degree_percentage"]').val(),
+        school_pass_year:$('select[name="10th_pass_year"]').val(),
+        college_pass_year:$('select[name="12th_pass_year"]').val(),
+        degree_pass_year:$('select[name="degree_pass_year"]').val()
+    }
+    console.log(data);
+    $.ajax({
+        type:"post",
+        url:"save_education_details.php",
+        data:data,
+        success:function(response)
+        {
+            var result=JSON.parse(response);
+        if (result.saved_successfully) {
+        $('.toast').toast('show');
+          $('#get_message').html(result.saved_successfully);
+    }
+        }
+    });
+
+});
+
+
+$("#upload_images").click(function(){
+    // alert("hello");
+    $('#success_message').show();
+   var form_data=new FormData();
+   var files= $('#photo')[0].files;
+   var files_1 = $('#sign')[0].files;
+   console.log(files);
+   console.log(files_1);
+   form_data.append('file_1',files[0]);
+   form_data.append('file_2',files_1[0]);
+   $.ajax({
+       type:"post",
+       url:"save_image.php",
+       data:form_data,
+       contentType: false,
+        processData: false,
+       success:function(response)
+       {
+        //    alert(response);
+           var result=JSON.parse(response);
+        if (result.saved_successfully) {
+        $('.toast').toast('show');
+          $('#get_message').html(result.saved_successfully);
+    }
+       }
+   });
+//    alert(JSON.stringify(form_data));
+});
+
+
+
+
+
+$(document).ready(function(){
+
+var current_fs, next_fs, previous_fs; //fieldsets
+var opacity;
+var current = 1;
+var steps = $("fieldset").length;
+
+setProgressBar(current);
+
+$(".next").click(function(){
+
+current_fs = $(this).parent();
+next_fs = $(this).parent().next();
+
+//Add Class Active
+$("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+
+//show the next fieldset
+next_fs.show();
+//hide the current fieldset with style
+current_fs.animate({opacity: 0}, {
+step: function(now) {
+// for making fielset appear animation
+opacity = 1 - now;
+
+current_fs.css({
+'display': 'none',
+'position': 'relative'
+});
+next_fs.css({'opacity': opacity});
+},
+duration: 500
+});
+setProgressBar(++current);
+});
+
+$(".previous").click(function(){
+
+current_fs = $(this).parent();
+previous_fs = $(this).parent().prev();
+
+//Remove class active
+$("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+
+//show the previous fieldset
+previous_fs.show();
+
+//hide the current fieldset with style
+current_fs.animate({opacity: 0}, {
+step: function(now) {
+// for making fielset appear animation
+opacity = 1 - now;
+
+current_fs.css({
+'display': 'none',
+'position': 'relative'
+});
+previous_fs.css({'opacity': opacity});
+},
+duration: 500
+});
+setProgressBar(--current);
+});
+
+function setProgressBar(curStep){
+var percent = parseFloat(100 / steps) * curStep;
+percent = percent.toFixed();
+$(".progress-bar")
+.css("width",percent+"%")
+}
+
+$(".submit").click(function(){
+return false;
+})
+
+});
+
+
+
+function print_form() {
+    $.ajax({
+        type:"post",
+        url:"retrive_user_data.php",
+        success:function(response){
+            var result=JSON.parse(response);
+            console.log(result);
+            // alert("hello");
+            var form="";
+//     form+="<!DOCTYPE html>";
+// form+="<html lang='en'>";
+// form+="<head>";
+//    form+= "<meta charset='UTF-8'>";
+//    form+= "<meta http-equiv='X-UA-Compatible' content='IE=edge'>";
+//     form+="<link rel='stylesheet' href='font/font-awesome.css'>";
+//     form+="<meta name='viewport' content='width=device-width, initial-scale=1.0'>";
+//     form+="<title>Document</title>";
+//     form+="<link rel='stylesheet' href='css/bootstrap.css'>";
+//     form+="<link rel='stylesheet' href='css/style.css'>";
+form+="</head>";
+form+="<body>";
+form+="<div class='container' id='print_div'>";
+form+="<div style='width: 50%;margin-left: 25%;margin-right: 25%;border:2px solid black'>";
+form+="<div class='d-flex justify-content-center'>";
+form+="<h4>ONLINE APPLICANT ADMISSION FORM</h4>";
+form+=" </div>";
+form+="<div class='row' style='margin-top: 10px;margin-right: 2px;'>";
+form+="<div class='col-md-8'>";
+form+="<h4 style='margin-left: 10px;'>Student Personal Details :</h4>";
+form+="</div>";
+form+="<div class='col-md-4'>";
+form+="<div style='border: 1px solid black;'>";
+form+="<p><img src='../Assets/images/student/"+result[0].student_photo+"' style='width:100%;height:100%'></p>";
+form+="</div>";
+form+="</div>";
+form+="</div>";
+form+="<div class='row' style='margin-top: 10px;'>";
+form+="<div class='col-md-4'>";
+form+="<p style='margin-left: 15px;'>Name Of Course: <span>"+result[0].course_selected+"</span></p>";
+form+="</div>";
+form+="<div class='col-md-4'>";
+form+="<p style='margin-left: 15px;'>Student Full Name: <span>"+result[0].student_name+"</span></p>";
+form+="</div>";
+form+="<div class='col-md-4'>";
+form+="<p style='margin-left: 15px;'>Email Address: <span>"+result[0].student_email+"</span></p>";
+form+="</div>";
+form+=" <div class='col-md-4'>";
+form+="<p style='margin-left: 15px;'>Alt Email Address: <span>"+result[0].student_alternate_email+"</span></p>";
+form+="</div>";
+form+="<div class='col-md-4'>";
+form+="<p style='margin-left: 15px;'>Mobile Number: <span>"+result[0].student_mobile+"</span></p>";
+form+="</div>";
+form+="<div class='col-md-4'>";
+form+="<p style='margin-left: 15px;'>Date Of birth: <span>"+result[0].date_of_birth+"</span></p>";
+form+="</div>";
+form+="<div class='col-md-4'>";
+form+="<p style='margin-left: 15px;'>Gender: <span>"+result[0].gender+"</span></p>";
+form+="</div>";
+form+="<div class='col-md-4'>";
+form+="<p style='margin-left: 15px;'>Marital Status: <span>"+result[0].marital_status+"</span></p>";
+form+="</div>";
+form+="<div class='col-md-4'>";
+form+="<p style='margin-left: 15px;'>Blood Group: <span>"+result[0].blood_group+"</span></p>";
+form+="</div>";
+form+=" </div>";
+form+="<div class='d-flex justify-content-start'>";
+form+="<h4 style='margin-left: 10px;'>Address Details :</h4>";
+form+="</div>";
+form+="<div class='row'>";
+form+="<div class='col-md-4'>";
+form+="<p style='margin-left: 15px;'>Country: <span>"+result[0].country+"</span></p>";
+form+="</div>";
+form+="<div class='col-md-4'>";
+form+="<p style='margin-left: 15px;'>state: <span>"+result[0].state+"</span></p>";
+form+="</div>";
+form+="</div>";
+form+="<div class='row'>";
+form+="<div class='col-md-8'>";
+form+=" <p style='margin-left: 15px;'>Address: <span>"+result[0].student_address+"</span></p>";
+form+="</div>";
+form+="<div class='col-md-4'>";
+form+="<p style='margin-left: 15px;'>Pincode: <span>"+result[0].pincode+"</span></p>";
+form+="</div>";
+form+="</div>";
+form+="<div class='d-flex justify-content-start'>";
+form+="<h4 style='margin-left: 10px;'>Father/Mother/Guardian Details :</h4>";
+form+="</div>";
+form+="<div class='row'>";
+form+="<div class='col-md-8'>";
+form+="<p style='margin-left: 15px;'>Father/Mother/Guardian :<span>"+result[0].guardian_name+"</span></p>";
+form+="</div>";
+form+="<div class='col-md-4'>";
+form+="<p style='margin-left: 15px;'>Relationship: <span>"+result[0].guardian_relationship+"</span></p>";
+form+="</div>";
+form+="</div>";
+form+="<div class='d-flex justify-content-start'>";
+form+="<h4 style='margin-left: 10px;'>Educational Details :</h4>";
+form+="</div>";
+form+=" <div class='d-flex justify-content-start'>";
+form+="<h6 style='margin-left: 10px;'>10th Board Details :</h6>";
+form+=" </div>";
+form+="<div class='row'>";
+form+=" <div class='col-md-4'>";
+form+="<p style='margin-left: 15px;'>School Name: <span>"+result[0].school_name_10+"</span></p>";
+form+="</div>";
+form+="<div class='col-md-4'>";
+form+="<p>Year Of Examination: <span>"+result[0].school_pass_year_10+"</span></p>";
+form+=" </div>";
+form+="<div class='col-md-4'>";
+form+="<p style='margin-left: px;'>Percentage Obtained: <span>"+result[0].school_percentage_10+"</span></p>";
+form+="</div>";
+form+="</div>";
+form+=" <div class='d-flex justify-content-start'>";
+form+="<h6 style='margin-left: 10px;'>12th Board Details :</h6>";
+form+="</div>";
+form+="<div class='row'>";
+form+="<div class='col-md-4'>";
+form+="<p style='margin-left: 15px;'>College Name: <span>"+result[0].college_name_12+"</span></p>";
+form+="</div>";
+form+="<div class='col-md-4'>";
+form+="<p>Year Of Examination: <span>"+result[0].college_pass_year_12+"</span></p>";
+form+="</div>";
+form+="<div class='col-md-4'>";
+form+="<p style='margin-left:0px;'>Percentage Obtained: <span>"+result[0].college_percentage_12+"</span></p>";
+form+=" </div>";
+form+="</div>";
+form+="<div class='d-flex justify-content-start'>";
+form+="<h6 style='margin-left: 10px;'>Graduation Details :</h6>";
+form+="</div>";
+form+="<div class='row'>";
+form+="<div class='col-md-4'>";
+form+="<p style='margin-left: 15px;'>College Name: <span>"+result[0].degree_name+"</span></p>";
+form+="</div>";
+form+="<div class='col-md-4'>";
+form+="<p >Year Of Examination: <span>"+result[0].college_degree_pass_year+"</span></p>";
+form+="</div>";
+form+="<div class='col-md-4'>";
+form+="<p style='margin-left: px;'>CGPI Obtained: <span>"+result[0].college_degree_percentage+"</span></p>";
+form+="</div>";
+form+="</div>";
+form+="<div class='row my-2'>";
+form+="<div class='col-md-4 offset-md-8'>";
+form+="<p style='margin-left: 15px;'>Signature:<span><img src='../Assets/images/student/"+result[0].student_signature+"' style='width:100%;height:100%'></span></p>";
+form+="</div>";
+form+="</div>";
+form+="</div>";
+form+="</div>";
+// form+="</body>";
+// form+="</html>";
+// window.open("https://www.w3schools.com");
+$('#test').html(form);
+ var prtContent = document.getElementById("test").innerHTML;
+ console.log(prtContent);
+            // var WinPrint = window.open('', '', 'left=0,top=0,width=800,height=900,toolbar=0,scrollbars=0,status=0');
+            var win = window.open("", "Title", "toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=1600,height=1280%,fullscreen=yes,top="+(screen.height-400)+",left="+(screen.width-840));
+            win.document.write('<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><link rel="stylesheet" href="font/font-awesome.css"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Document</title><link rel="stylesheet" href="css/bootstrap.css"><link rel="stylesheet" href="css/style.css"></head><body>');
+            win.document.body.innerHTML = form;
+            win.document.write('</body></html>');
+
+            // WinPrint.document.write(prtContent);
+            // WinPrint.document.close();
+            // WinPrint.focus();
+            // WinPrint.print(prtContent);
+            // WinPrint.close();
+ 
+        }
+    })
+            
+}
+
+
+
+</script>
+</html>
